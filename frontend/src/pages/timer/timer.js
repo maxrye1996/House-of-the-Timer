@@ -21,8 +21,41 @@ const useStyles = makeStyles((theme) => ({
 
 const TimerTab = () => {
 
+  const ENDPOINT = "http://localhost:5000" // needs changing to some component file?
+
   const classes = useStyles();
   const theme = useTheme();
+
+  const [timers, setTimers] = React.useState([])
+
+  const makePostRequest = (path, data) => {
+    fetch(`${ENDPOINT}${path}`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+  };
+
+  const makeGetRequest = async (path) => {
+    const response = await fetch(`${ENDPOINT}${path}`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
+    const data = await response.json();
+    return data
+  };
+
+
+  
 
   return (
     <p>house of the timer</p>
