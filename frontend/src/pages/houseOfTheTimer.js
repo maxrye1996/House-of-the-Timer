@@ -4,6 +4,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { CssBaseline, Grid, Paper } from '@material-ui/core';
 
 import TimerTab from './timer/timer';
+import Title from '../components/title';
 
 const useStyles = makeStyles((theme) => ({
   main: {
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     width: "calc(100% + 50px)",
     marginLeft: -25,
     padding: 0,
+    background: "black"
   },
 }));
 
@@ -28,18 +30,17 @@ const HouseOfTheTimer = () => {
   return (
     <div>
       <CssBaseline />
-      <div>
-        <Router>
-          <Grid container spacing={8} className={ classes.main }>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-              <Paper className={ classes.mainPaper }>
-                <Route exact path='/timer' component={ TimerTab } />
-                <Route exact path='/' render={ () => <Redirect to="/timer" /> } />
-              </Paper>
-            </Grid>
+      <Title />
+      <Router>
+        <Grid container spacing={8} className={ classes.main }>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <Paper className={ classes.mainPaper }>
+              <Route exact path='/timer' component={ TimerTab } />
+              <Route exact path='/' render={ () => <Redirect to="/timer" /> } />
+            </Paper>
           </Grid>
-        </Router>
-      </div>
+        </Grid>
+      </Router>
     </div>
   )
 
