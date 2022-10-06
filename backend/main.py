@@ -21,3 +21,21 @@ async def test(response: Response) -> None:
     print("test successfull")
     response.status_code = 200
     return
+
+@app.post("/api/add_timer")
+async def add_timer(response: Response) -> None:
+    print("[    MAIN    ] [-] : Request to add timer ")
+    response.status_code = 200
+    return
+
+@app.post("/api/delete_timer")
+async def delete_timer(response: Response) -> None:
+    print("[    MAIN    ] [-] : Request to delete timer ")
+    response.status_code = 200
+    return
+
+@app.get("/api/get_timers")
+async def get_timers(response: Response) -> None:
+    print("[    MAIN    ] [-] : Request to get timer ")
+    response.status_code = 200
+    return
