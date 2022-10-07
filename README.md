@@ -16,10 +16,10 @@
 
 
 ## TODO
-[ ] Frontend timer styling
-[ ] Frontend Add/Delete timer functionality 
-[ ] Backend get_timer api functionality
-[ ] Backend save_timer api functionality
-[ ] Backend delete_timer api functionality
-[ ] Dockerise
-[ ] Anisble install script
+- [ ] Frontend timer styling
+- [ ] Frontend Add/Delete timer functionality 
+- [ ] Backend get_timer api functionality
+- [ ] Backend save_timer api functionality
+- [ ] Backend delete_timer api functionality
+- [ ] Dockerise
+- [ ] Anisble install script
