@@ -1,1 +1,1 @@
-### React front end, shows timers and allows to add new timers
+### React front end
