@@ -1,1 +1,1 @@
-## Python backedn to take API requests from frontend and save config
+## Python backend to take API requests from frontend and save config
