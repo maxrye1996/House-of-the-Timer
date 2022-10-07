@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
     width: "calc(100% + 50px)",
     marginLeft: -25,
     padding: 0,
-    background: "black"
   },
 }));
 
